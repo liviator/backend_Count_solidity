@@ -1,6 +1,7 @@
 {
     "compilerOptions": {
       "preserveConstEnums": true,
+      "outDir": "dist",
       "strict": true,
       "target": "es6",
       "rootDir": "./",

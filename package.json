@@ -16,8 +16,9 @@
     "sqlite3": "^5.0.8"
   },
   "scripts": {
-    "id:create": "ts-node src/keygen.ts",
-    "start": "nodemon src/index.ts"
+    "start": "node dist/index.js",
+    "postinstall": "tsc",
+    "id:create": "ts-node src/keygen.ts"
   },
   "devDependencies": {
     "@types/ethereumjs-util": "^6.1.0",
