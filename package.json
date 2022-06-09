@@ -16,7 +16,7 @@
     "sqlite3": "^5.0.8"
   },
   "scripts": {
-    "start": "node dist/index.js",
+    "start": "node app/dist/index.js",
     "postinstall": "tsc",
     "id:create": "ts-node src/keygen.ts"
   },
