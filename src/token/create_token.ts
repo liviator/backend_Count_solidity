@@ -32,7 +32,7 @@ export const create_token = async function main(address:string, res:any) {
                 res.status(200).send({message:"address is now whitelisted"})
             }
         });
-    } catch (e:any) {
+    } catch (e) {
         throw Error(e);
     }
 }

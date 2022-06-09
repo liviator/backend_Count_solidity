@@ -1,3 +1,4 @@
 dd 
 node_modules/
 .env
+dist/

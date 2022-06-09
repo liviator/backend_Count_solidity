@@ -13,11 +13,11 @@ export const get_token = async function main(address:string, res:any) {
                 else {
                     res.status(404).send({error:"User not whitelisted"})
                 }
-            } catch(err:any) {
+            } catch(err) {
                 throw Error(err)
             }
         })
-    } catch(e:any) {
+    } catch(e) {
         throw Error(e)
     }
 }

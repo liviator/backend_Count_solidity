@@ -5,12 +5,15 @@
       "strict": true,
       "target": "es6",
       "rootDir": "./",
+      "module": "commonjs",
       "moduleResolution": "node",
       "esModuleInterop": true,
       "downlevelIteration": true,
       "typeRoots": ["./node_modules/@types", "./env.d.ts"]
     },
     "include": [
-      "./node_modules/types-ethereumjs-util/index.d.ts"
+      "./node_modules/types-ethereumjs-util/index.d.ts",
+      "src/**/*"
     ],
+    "exclude": ["node_modules"]
   }
