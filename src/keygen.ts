@@ -3,6 +3,9 @@ import { ethers } from 'ethers';
 import * as crypto from 'crypto';
 
 
+/**
+ * It creates a private key used to sign token which can prove that you are whitelisted on the smart contract  .
+ */
 async function main() {
     
     const wallet = ethers.Wallet.createRandom()

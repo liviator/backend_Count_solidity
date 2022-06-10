@@ -12,6 +12,12 @@ const Buffer_pk = Buffer.from(pk, 'hex')
 
 
 
+/**
+ * It takes an address and the express response , and then it inserts the address and a signed
+ * token into the database
+ * @param {string} address - the address of the new token
+ * @param {any} res - express response 
+ */
 
 export const create_token = async function main(address:string, res:any) {
     try {
@@ -37,7 +43,11 @@ export const create_token = async function main(address:string, res:any) {
     }
 }
 
-
+/**
+ * Bufferize then hash any input with its type, here an address (type: address)
+ * @param {string[]} types - the type of the input you want to hash
+ * @param {any[]} values - its value
+ */
 async function generateHashBuffer(types:string[], values:any[])  {
     const buffer = await keccak256(toBuffer(ethers.utils.defaultAbiCoder.encode(types,values)));
     return buffer;
