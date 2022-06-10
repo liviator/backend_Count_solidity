@@ -18,14 +18,14 @@ export const get_token = async function main(address:string, res:any) {
                     res.status(200).send({token: JSON.parse(resp.token)});
                 }
                 else {
-                    res.status(404).send({error:"User not whitelisted"})
+                    res.status(404).send({error:"User not whitelisted"});
                 }
             } catch(err:any) {
-                throw Error(err)
+                throw Error(err);
             }
         })
     } catch(e:any) {
-        throw Error(e)
+        throw Error(e);
     }
 }
 

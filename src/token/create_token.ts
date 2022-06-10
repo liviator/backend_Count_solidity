@@ -31,11 +31,10 @@ export const create_token = async function main(address:string, res:any) {
         };
         db.run("INSERT INTO token VALUES (?,?)",address, JSON.stringify(hex_token), function(err:any,response:any){
             if(err) {
-                res.status(400).send({error:"Address already whitelisted"})
-                console.log("already whitelisted")
+                res.status(400).send({error:"Address already whitelisted"});
             }
             else {
-                res.status(200).send({message:"address is now whitelisted"})
+                res.status(200).send({message:"address is now whitelisted"});
             }
         });
     } catch (e:any) {
